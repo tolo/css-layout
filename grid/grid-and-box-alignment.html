@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Grid and box alignment</title>
+
+  <style>
+    .root {
+      display: grid;
+      height: 600px;
+      grid-gap: 5px;
+      grid-template-columns: 150px 150px 150px 150px;
+      grid-auto-rows: 150px;
+      border: 10px solid goldenrod;
+    }
+
+    .root {
+      /* TODO: Showcase default justify-content mode of stretch when using auto width of item, and what happens when changing */
+      /* grid-template-columns: 150px auto 150px 150px; */
+      /* justify-content: end; */
+    }
+
+    .root {      
+      /* grid-template-columns: repeat(auto-fit, 150px); */
+      /* TODO: Center content horizontally and vertically  */
+      /* TODO: Change alignment of child items to end, end */
+    }
+
+    .item2 {
+      /* TODO: Set inividual alignment  */
+    }
+
+
+    .grid .item {
+      padding: 0px;
+      border: 0px;
+    }
+  
+    .item img {
+      margin: 0px;
+      width: 100px;
+    }
+
+  </style>
+  
+  </head>
+  
+  <body>
+  
+    <h1>Grid and box alignment</h1>
+    <h2></h2>
+  
+    <div class="grid root">
+  
+      <div class="item item1"><img src="https://live.staticflickr.com/8111/8533701997_a82ffbe124_w.jpg" alt=""></div>
+      <div class="item item2">🤖</div>
+      <div class="item item3"><img src="https://live.staticflickr.com/8378/8533701223_5a6f7f80ae_w.jpg" alt=""></div>
+      <div class="item item4"><img src="https://live.staticflickr.com/8532/8534805952_a410dfa8d6_w.jpg" alt=""></div>
+      <div class="item item5"><img src="https://live.staticflickr.com/8111/8533701997_a82ffbe124_w.jpg" alt=""></div>
+      
+    </div>
+  
+    <div class="notes">
+      <h3>Notes:</h3>
+
+      <h5>Alignment on the Block Axis</h5>
+      <ul>
+        <li>For grid - this means vertical (top-down*)</li>
+        <li>Requires a height to be set to be effective</li>
+        <li>Properties starts with <code>align...</code>:</li>
+        <li><code>align-content</code> - the whole content of a <strong>container</strong> - start, end, center, space-between, space-around, baseline etc</li>
+        <li><code>align-self</code> - on child items - start, end, center, stretch - default stretch (except images)</li>
+        <li><code>align-items</code> - on container - like align-self, for all children</li>
+      </ul>
+
+      <h5>Alignment on the Inline Axis</h5>
+      <ul>
+        <li>For grid - this means horizontal (left-right*)</li>
+        <li>Properties starts with <code>justify...</code>:</li>
+        <li><code>justify-content</code> - the whole content of a <strong>container</strong> - start, end, center, space-between, space-around, baseline etc</li>
+        <li><code>justify-items</code> - on child items - start, end, center, stretch - default stretch (except images)</li>
+        <li><code>justify-self</code> - on container - like align-self, for all children</li>
+        <li><code>place-self</code> - shorthand for both justify-self and align-self, not widely supported yet</li>
+      </ul>
+
+      <h5>Generic and easy way to center an item:</h5>
+      <code><pre>display: grid;
+justify-content: center;
+align-items: center;</pre></code>
+
+      <h5>Reference:</h5>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment (MDN)</a></li>
+      </ul>
+    </div>
+    
+    <p>
+      <small>* Depending on writing direction</small>
+    </p>
+
+    <style>
+      /* Facit: */
+
+      /* .root {
+        align-content: center;
+        justify-content: center;
+        align-items: end;
+        justify-items: end;
+      } */
+
+      /* .item2 {
+        align-self: center;
+        justify-self: center;
+      } */
+    
+    </style>
+  
+  </body>
+  
+  </html>

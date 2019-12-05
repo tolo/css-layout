@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Clearing</title>
+
+  <style>
+    p {
+      padding: 0 0 1em 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .root {
+      max-width: 900px;
+    }
+
+    .box {
+      border: 1px solid #000;
+      background-color: #eff;
+      padding: 20px;
+      margin: 0 0 1em 0;
+    }
+
+    .floated {
+      width: 300px;
+      display: block;
+      border: 6px solid turquoise;
+      float: left;
+      margin: 0 24px 24px 0;
+    }
+
+    /* Clearfix hack */
+    /*.box::after {
+      content: "";
+      display: block;
+      clear: both;
+    }*/
+
+    /* Overflow clearing */
+    /*.box {
+      overflow: auto;
+    }*/
+
+    /* New and preferred way - without side effects */
+    /*.box {
+      display: flow-root;
+    }*/
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Clearing</h1>
+  <h2>Clearing your float</h2>
+
+  <div class="root">
+    <div class="box">
+      <img class="floated" src="https://live.staticflickr.com/65535/15187165836_8e0705e084_c.jpg" alt="smoke">
+
+      <p>Lorem ipsum dolor amet affogato tattooed helvetica chartreuse quinoa humblebrag drinking vinegar iceland
+        adaptogen street art schlitz vaporware. Swag migas keytar microdosing pour-over. Four dollar toast street art 3
+        wolf moon austin mlkshk kickstarter offal health goth shaman intelligentsia pour-over bespoke butcher. Neutra
+        blog
+        la croix, pabst authentic tumeric hot chicken cray mlkshk. Raclette organic woke yuccie, mustache 90's plaid
+        enamel pin twee celiac intelligentsia cardigan. Chartreuse pok pok cardigan seitan.</p>
+
+    </div>
+    <p>Ethical butcher kinfolk freegan gochujang quinoa ugh pabst paleo DIY helvetica air plant. Coloring book poke
+      listicle yuccie austin. PBR&B kitsch kinfolk, fanny pack cray kombucha knausgaard hell of green juice forage.
+      Live-edge disrupt cronut, meh keytar 8-bit tousled.</p>
+
+    <p>Franzen ramps sartorial narwhal portland, pickled polaroid normcore flexitarian meggings before they sold out
+      seitan 90's pabst. Pabst YOLO sustainable woke ethical deep v direct trade brooklyn cred. Ethical bitters
+      messenger
+      bag, meh pinterest thundercats fanny pack fingerstache locavore vexillologist lomo cred raw denim pop-up.
+      Typewriter
+      slow-carb distillery, pitchfork tilde ethical enamel pin street art yr selvage. Swag trust fund tumeric butcher
+      biodiesel sartorial vegan listicle flannel. Narwhal bicycle rights lumbersexual, pickled offal tilde biodiesel
+      hoodie. Freegan gastropub DIY, chambray you probably haven't heard of them brooklyn retro bitters 3 wolf moon etsy
+      af.</p>
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <h5>Reference:</h5>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats (MDN)</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Grid sizing</title>
+
+  <style>
+    .root {
+      display: grid;
+      grid-gap: 20px;
+    }
+
+    .autofill {
+      grid-template-columns: repeat(auto-fill, 200px);
+      /* Result with flexible columns: */
+      /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    }
+    .autofill .item4 {
+      /* grid-column-end: -1; */
+    }
+
+    .autofit {
+      /* This produces same result as repeat(auto-fill, 200px): */
+      grid-template-columns: repeat(auto-fit, 200px); 
+      /* Result with flexible columns: */
+      /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    }
+    .autofit .item4 {
+      /* This will not yield same result as for autofill: */
+      /* grid-column-end: -1; */
+    }
+
+    .item4_1 {
+      display: none;
+    }
+
+    .fitcontent { /* Test with cell that has more content (item4_1) */
+      grid-template-columns: 200px 1fr 2fr auto; /* For comparison - auto sized last column */
+      /* grid-template-columns: 200px 1fr 2fr fit-content(100px); */
+    }
+    .fitcontent .item4 {
+      display: none;
+    }
+    .fitcontent .item4_1 {
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Grid sizing</h1>
+  <h2></h2>
+
+  <div class="grid root">
+
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item4_1">4 4 4 4 4 4 4</div>
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <ul>
+      <li>Auto-fill reserves space for the next cell at the end of the row</li>
+      <li>Auto-fit does not - instead attempts to fit to the available space</li>
+      <li>Combine with minmax to get responsive grid without need for media queries</li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Grid basics</title>
+
+  <style>
+    .root {
+      display: grid;
+      /* TODO: Try gap  */
+      /* grid-gap: 20px; */
+      /* Note: Official name is 'gap' */
+
+      /* TODO: Try simple comlumn definitions */
+      /* grid-template-columns: 200px 100px 200px; */
+
+      /* TODO: Try simple row definitions */
+      /* grid-template-rows: 100px 50px 150px; */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Grid basics</h1>
+  <h2>Tracks, lines and gaps</h2>
+
+  <div class="grid root">
+
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <ul>
+      <li>Open developer tools in Firefox and select the layout inspector</li>
+    </ul>
+
+    <h5>Reference:</h5>
+    <ul>
+      <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks - Grid (guide / cheatsheet)</a>
+      </li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid (MDN)</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

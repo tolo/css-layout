@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Flexbox aligment - align-self</title>
+
+  <style>
+    .root {
+      border: 5px solid goldenrod;
+      display: flex;
+      height: 500px;
+      align-items: flex-start;
+    }
+
+    .item3 {
+      height: 150px;
+      /* align-self: center; */
+    }
+
+    /* .item4 {
+      align-self: stretch;
+    } */
+
+    .item5 {
+      height: 300px;
+      /* align-self: center; */
+    }
+
+    /* .item6 {
+      align-self: flex-end;
+    } */
+
+    .item8 {
+      height: 200px;
+      /* align-self: center; */
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Flexbox aligment - align-self</h1>
+  <h2></h2>
+
+  <div class="flexbox root">
+
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    
+    <h5>Alignment on the Main Axis</h5>
+    <ul>
+      <li><code>justify-content</code> - the whole content of a <strong>container</strong> - flex-start, flex-end, center,
+        space-between, space-around, baseline etc</li>
+      <li><code>justify-items</code> - <strong>NOT available for Flexbox</strong></li>
+      <li><code>justify-self</code> - <strong>NOT available for Flexbox</strong></li>
+    </ul>
+    
+    <h5>Alignment on the Cross Axis</h5>
+    <ul>
+      <li>Requires a height (for row direction) to be set to be effective</li>
+      <li>Properties starts with <code>align...</code>:</li>
+      <li><code>align-content</code> - the whole content of a <strong>container</strong> - start, end, center,
+        space-between, space-around, baseline etc</li>
+      <li><code>align-self</code> - on flex (child) items - flex-start, flex-end, center, stretch - default stretch (except images)</li>
+      <li><code>align-items</code> - on container - like align-self, for all children</li>
+    </ul>
+
+    <h5>Reference:</h5>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment (MDN)</a></li>
+    </ul>
+  </div>
+    
+</body>
+
+</html>

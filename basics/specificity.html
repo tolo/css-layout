@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Selector Specificity</title>
+
+  <style>
+    /* TODO: 5 - Declaration before, but with higher specificity? */
+    /* .root > div p#hello1 {
+      background-color: hotpink;
+    } */
+
+    /* TODO: 4 - Declaration before, but with higher specificity? */
+    /* #hello1 {
+      background-color: turquoise;
+    } */
+
+    /* TODO: 3 - Declaration before, but with higher specificity? */
+    /* #root div .hello {
+      background-color: salmon;
+    } */
+
+    /* TODO: 2 - Declaration before, but with higher specificity? */
+    /* div .hello {
+      background-color: goldenrod;
+    } */
+
+    .hello {
+      background-color: plum;
+    }
+
+    /* TODO: 1 - Declaration after overrides */
+    /* .hello {
+      background-color: orangered;
+    } */
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Selector Specificity</h1>
+
+  <div class="root" id="root">
+    <div class="container">
+      <p class="thingy hello" id="hello1">Hello World 1</p>
+      <p class="thingy hello" id="hello2">Hello World 2</p>
+      <p class="thingy hello" id="hello3">Hello World 3</p>
+      <p class="thingy hello" id="hello4">Hello World 4</p>
+    </div>
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <h5>Reference:</h5>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade
+          and inheritance</a></li>
+
+    </ul>
+  </div>
+
+</body>
+
+</html>

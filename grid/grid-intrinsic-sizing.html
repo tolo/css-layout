@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Grid intrinsic sizing</title>
+
+  <style>
+    .root {
+      display: grid;
+      grid-gap: 20px;
+      grid-auto-rows: minmax(150px, auto);
+    }
+
+    .mincontent {
+      grid-template-columns: repeat(2, 200px min-content);
+    }
+
+    .maxcontent {
+      grid-template-columns: 200px max-content;
+    }
+
+    .fitcontent {
+      grid-template-columns: fit-content(200px) fit-content(400px);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Grid intrinsic sizing</h1>
+  <h2></h2>
+
+  <div class="grid root">
+
+    <div class="item item1">One</div>
+    <div class="item item2">Two two</div>
+    <div class="item item3">ThreeThree Three</div>
+    <div class="item item4">Four Four Four Four</div>
+    <div class="item item5">Five Five Five Five Five</div>
+    <div class="item item6">Six Six Six Six Six Six</div>
+    <div class="item item7">Seven Seven Seven Seven Seven Seven Seven</div>
+    <div class="item item8">Eight Eight Eight Eight Eight Eight Eight Eight</div>
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <ul>
+      <li>Auto-fill space for the next cell at the end of the row</li>
+      <li>Auto-fit does not</li>
+      <li>Combine with minmax to get responsive grid without need for media queries</li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

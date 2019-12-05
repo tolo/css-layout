@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Grid template areas</title>
+
+  <style>
+    .root {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 10fr 1fr;
+      grid-template-rows: 75px auto 75px;
+
+      /* TODO: 1 - Define areas through the use of grid-template-areas */
+    }
+
+    /* TODO: 2 - Assign (place) different elements in diffent parts of grid */
+
+    .image {
+      height: 200px;
+    }
+
+    article p {
+      margin: 0px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Grid template areas</h1>
+  <h2></h2>
+
+  <div class="grid root">
+
+    <header>Header</header>
+    <nav>Sidebar 1</nav>
+    <article>
+      <h3>Article</h3>
+      <p>This is what we want:</p>
+      <img class="image" src="https://www.dropbox.com/s/soeuudpnzgpma2x/grid-template-areas.png?dl=1"
+        alt="final result">
+      <!-- <img class="image" src="https://live.staticflickr.com/65535/15209807502_7246ef7ab0_c.jpg" alt="volcano"> -->
+    </article>
+    <aside>Sidebar 2</aside>
+    <footer>Footer</footer>
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <ul>
+      <li>Use as much whitespace as you wish in template areas (ASCII art)</li>
+      <li>Mutiline strings supported when defining areas</li>
+      <li>One or more dots means empty (unallocated space)</li>
+      <li>Area names can be used for line names (i.e. 'header' auto generates 'header-start' and 'header-end')</li>
+    </ul>
+  </div>
+
+
+  <style>
+    /* "Facit:" */
+
+    /* .root {
+        grid-template-areas:
+        "sidebar-1  heheader    header"
+        "sidebar-1  content   sidebar-2"
+        ".........  footer    footer"
+      } */
+
+    /* header {
+        grid-area: header;
+      } */
+
+    /* nav {
+        grid-area: sidebar-1;
+      } */
+
+    /* aside {
+        grid-area: sidebar-2;
+      } */
+
+    /* article {
+        grid-area: content;
+      } */
+
+    /* footer {
+        grid-area: footer;
+      } */
+  </style>
+
+</body>
+
+</html>

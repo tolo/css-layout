@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Flexbox - flex property</title>
+
+  <style>
+    .root {
+      border: 5px solid goldenrod;
+      display: flex;
+    }
+
+    .flexbox .item {
+      font-size: 3em;
+    }
+
+    /* TODO: 1 - ... */
+    .wrapped .item {
+      /* Setting only flex-basis in this case (since all items won't fit) means items 
+      will shrink according to default flex-shrink value */
+      flex-basis: 300px;
+      /* TODO: 1a - inspect elements to verify width is < 400 */
+    }
+    .wrapped {
+      /* TODO: 1b - enable wrapping to make sure items get 400px width */
+      flex-wrap: wrap;
+    }
+    .wrapped .item {
+      /* TODO: 1c - enable flex-grow to make items take up all available space */
+      flex-grow: 1;
+    }
+
+    /* TODO: 2 - Try different flex-grow values */
+    .wrapped2 {
+      flex-wrap: wrap;
+    }
+    .wrapped2 .item {
+      flex-basis: 300px;
+      flex-grow: 1;
+    }
+    .wrapped2 .item3 {
+      flex-grow: 10;
+    }
+    
+    /* TODO: 3 - Chaning axis */
+    .wrapped3 {
+      flex-wrap: wrap;
+      flex-direction: column;
+      /* min-height: 100vh; */
+      height: 100vh;
+    }
+    .wrapped3 .item {
+      flex-grow: 1;
+      flex-basis: 150px;
+    }
+    .wrapped3 .item3 {
+      flex-grow: 5;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Flexbox - flex property</h1>
+  <h2></h2>
+
+  <div class="flexbox root wrapped3">
+
+      <div class="item item1">1 🥛</div>
+      <div class="item item2">2 🍾</div>
+      <div class="item item3">3 🍺</div>
+      <div class="item item4">4 🍹</div>
+      <div class="item item5">5 🍸</div>
+  
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+  </div>
+    
+</body>
+
+</html>

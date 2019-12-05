@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Flexbox - flex property</title>
+
+  <style>
+    .root {
+      border: 5px solid goldenrod;
+      display: flex;
+    }
+
+    /* TODO: 1 - Using flex shorthand property (preferred method) */
+    .flexbox .item {
+      font-size: 1.5em;
+      /* flex: 1; */
+      /* flex: 1 1 0; */
+    }
+
+    .flexbox .item2 {
+      /* flex: 2; */
+    }
+
+    .flexbox .item4 {
+      /* flex: 4; */
+    }
+
+    /* TODO: 2 - Breaking flex down into grow, shrink, basis  */
+    .grow_shrink_basis .item {
+      /* Below is equvalent to flex: 1 */
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      /* Below is equvalent to when flex isn't set at all */
+      /* flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto; */
+    }
+
+    /* TODO: 3 - See what effect basis has with and without flex-grow. 
+      What happens when you have differet flex values, and try to resize the browser window?
+    */
+    .flex_grow_and_basis .item {
+      flex-basis: 300px;
+      /* flex-grow: 1; */
+    }
+    .flex_grow_and_basis .item1 {
+      flex-grow: 2;
+    }
+
+    /* TODO: 4 - Shrinking items */
+    .flex_shrink .item {
+      flex-basis: 300px;
+    }
+    .flex_shrink .item1 {
+      flex-grow: 1;
+      flex-shrink: 10;
+    }
+    .flex_shrink .item2 {
+      flex-grow: 1;
+    }
+    
+    /* TODO: 5 - Trying to make sense of flex-basis auto  */
+    .flex_basis_auto .item {
+      flex: 1;
+      flex-basis: auto;
+    }
+    .flex_basis_auto .item1 {
+      /* flex-grow: 2; */
+    }
+    .flex_basis_auto .item2 {
+      /* flex-grow: 3; */
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Flexbox - flex property</h1>
+  <h2></h2>
+
+  <div class="flexbox root">
+
+    <div class="item item1">1 One</div>
+    <div class="item item2">2 Twooo</div>
+  
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+
+    <h5>Flex basis auto explained:</h5>
+    <img src="https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg" alt="flex basis auto explained"/>
+  </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Grid autoflow dense</title>
+
+  <style>
+    .root {
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(auto-fit, 100px);
+      /* TODO: 1 - Define a grid that lays out element densly */
+    }
+
+    /* TODO: 2 - Setup different sizes of items to see how the grid gets "packed" */
+
+    .grid .item {
+      padding: 0px;
+      border: 0px;
+    }
+
+    .item img {
+      margin: 0px;
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Grid autoflow dense</h1>
+  <h2></h2>
+
+  <div class="grid root">
+
+    <div class="item item1"><img src="https://live.staticflickr.com/8111/8533701997_a82ffbe124_w.jpg" alt=""></div>
+    <div class="item item2"><img src="https://live.staticflickr.com/8527/8533700229_bf0b424633_w.jpg" alt=""></div>
+    <div class="item item3"><img src="https://live.staticflickr.com/8378/8533701223_5a6f7f80ae_w.jpg" alt=""></div>
+    <div class="item item4"><img src="https://live.staticflickr.com/8532/8534805952_a410dfa8d6_w.jpg" alt=""></div>
+    <div class="item item5"><img src="https://live.staticflickr.com/8111/8533701997_a82ffbe124_w.jpg" alt=""></div>
+    <div class="item item6"><img src="https://live.staticflickr.com/8527/8533700229_bf0b424633_w.jpg" alt=""></div>
+    <div class="item item7"><img src="https://live.staticflickr.com/8378/8533701223_5a6f7f80ae_w.jpg" alt=""></div>
+    <div class="item item8"><img src="https://live.staticflickr.com/8532/8534805952_a410dfa8d6_w.jpg" alt=""></div>
+    <div class="item item9"><img src="https://live.staticflickr.com/8111/8533701997_a82ffbe124_w.jpg" alt=""></div>
+    <div class="item item10"><img src="https://live.staticflickr.com/8527/8533700229_bf0b424633_w.jpg" alt=""></div>
+    <div class="item item11"><img src="https://live.staticflickr.com/8378/8533701223_5a6f7f80ae_w.jpg" alt=""></div>
+    <div class="item item12"><img src="https://live.staticflickr.com/8532/8534805952_a410dfa8d6_w.jpg" alt=""></div>
+    <div class="item item13"><img src="https://live.staticflickr.com/8111/8533701997_a82ffbe124_w.jpg" alt=""></div>
+    <div class="item item14"><img src="https://live.staticflickr.com/8527/8533700229_bf0b424633_w.jpg" alt=""></div>
+    <div class="item item15"><img src="https://live.staticflickr.com/8378/8533701223_5a6f7f80ae_w.jpg" alt=""></div>
+    <div class="item item16"><img src="https://live.staticflickr.com/8532/8534805952_a410dfa8d6_w.jpg" alt=""></div>
+    <div class="item item17"><img src="https://live.staticflickr.com/8111/8533701997_a82ffbe124_w.jpg" alt=""></div>
+    <div class="item item18"><img src="https://live.staticflickr.com/8527/8533700229_bf0b424633_w.jpg" alt=""></div>
+    <div class="item item19"><img src="https://live.staticflickr.com/8378/8533701223_5a6f7f80ae_w.jpg" alt=""></div>
+    <div class="item item20"><img src="https://live.staticflickr.com/8532/8534805952_a410dfa8d6_w.jpg" alt=""></div>
+    <div class="item item21"><img src="https://live.staticflickr.com/8111/8533701997_a82ffbe124_w.jpg" alt=""></div>
+    <div class="item item22"><img src="https://live.staticflickr.com/8527/8533700229_bf0b424633_w.jpg" alt=""></div>
+
+
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <ul>
+
+    </ul>
+  </div>
+
+
+  <style>
+    /* Facit: */
+
+    .root {
+      /* grid-template-columns: repeat(auto-fit, 100px);
+        grid-auto-rows: 100px; */
+      /*grid-auto-flow: dense;*/
+    }
+
+    /* .item:nth-child(3n) {
+        grid-column: span 2;
+        grid-row: span 2;
+      } */
+
+    /* .item:nth-child(7n) {
+        grid-column: span 3;
+        grid-row: span 3;
+      } */
+  </style>
+
+</body>
+
+</html>

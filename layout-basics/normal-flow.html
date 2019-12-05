@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Normal document flow</title>
+
+  <style>
+    p {
+      background-color: goldenrod;
+    }
+
+    img {
+      height: 20em;
+      /*float: left;*/
+      border: 16px solid white;
+    }
+
+    .inlineElement {
+      background-color: plum;
+      /*padding: 20px;*/
+      /*display: inline-block;*/
+      /*display: block;*/
+    }
+
+    span {
+      /*display: block;*/
+      background-color: hotpink;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Normal document flow</h1>
+  <h2>Taking elements out of flow, display modes etc</h2>
+
+  <div class="root">
+    <img class="floated" src="https://live.staticflickr.com/8378/8533701223_5a6f7f80ae_c.jpg">
+    <p>Lorem ipsum dolor amet affogato tattooed helvetica chartreuse quinoa humblebrag drinking vinegar iceland
+      adaptogen
+      street art schlitz vaporware. Swag migas keytar microdosing pour-over. Four dollar toast street art 3 wolf moon
+      austin mlkshk kickstarter offal health goth shaman intelligentsia pour-over bespoke butcher. Neutra blog la croix,
+      pabst authentic tumeric hot chicken cray mlkshk. <span class="inlineElement">Raclette organic woke yuccie</span>,
+      mustache 90's plaid enamel pin twee
+      celiac intelligentsia cardigan. Chartreuse pok pok cardigan seitan.</p>
+
+    <span>Ethical butcher kinfolk freegan gochujang quinoa ugh pabst paleo DIY helvetica air plant. Coloring book poke
+      listicle yuccie austin. PBR&B kitsch kinfolk, fanny pack cray kombucha knausgaard hell of green juice forage.
+      Live-edge disrupt cronut, meh keytar 8-bit tousled.</span>
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <h5>Reference:</h5>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">Normal Flow (MDN)</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The Box Model
+          (MDN)</a>
+      </li>
+    </ul>
+  </div>
+
+
+</body>
+
+</html>

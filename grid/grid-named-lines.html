@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Named grid lines</title>
+
+  <style>
+    .root {
+      display: grid;
+      grid-gap: 20px;
+      /* TODO: 1 - Greate grid with named lines */
+    }
+
+    /* TODO: 2 - Assign (place) different elements in diffent parts of grid */
+
+    .image {
+      height: 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Named grid lines</h1>
+  <h2></h2>
+
+  <div class="grid root">
+
+    <header>Header</header>
+    <article>
+      <h3>Article</h3>
+      <img class="image" src="https://live.staticflickr.com/65535/15209807502_7246ef7ab0_c.jpg" alt="volcano">
+    </article>
+    <nav>Sidebar</nav>
+    <footer>Footer</footer>
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <ul>
+      <li>Use [name] before/between/after columns / rows</li>
+      <li>Use any names you like (identifiers)</li>
+      <li>Multiple values supported</li>
+    </ul>
+  </div>
+
+
+  <style>
+    /* "Facit:" */
+
+    /* .root {
+      grid-template-columns: [page-start] 1fr [content-start] 10fr [content-end page-end];
+      grid-template-rows: auto [content-start] auto [content-end] auto;
+    } */
+
+    /* header {
+      grid-column: page-start / page-end;
+      grid-row: 1;
+    } */
+
+    /* nav {
+      grid-column: 1;
+      grid-row: 2;
+    } */
+
+    /* article {
+      grid-column: content-start / content-end;
+      grid-row: content-start;
+    } */
+
+    /* footer {
+      grid-column: 1 / -1;
+      grid-row: 3;
+    } */
+  </style>
+
+</body>
+
+</html>

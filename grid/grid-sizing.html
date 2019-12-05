@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Grid sizing</title>
+
+  <style>
+    .root {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 200px 100px 200px;
+    }
+
+    /* TODO: Try different ways of sizing by setting adding class to root div */
+
+    .auto {
+      grid-template-columns: 200px 100px auto;
+    }
+
+    .fr {
+      grid-template-columns: 200px 1fr 200px;
+      /* grid-template-columns: 200px 1fr auto; */
+    }
+
+    .repeat {
+      grid-template-columns: repeat(2, 1fr 2fr);
+      /* grid-template-columns: 200px repeat(2, 1fr 2fr); */
+    }
+
+    .overflow {
+      grid-auto-rows: minmax(75px, auto);
+    }
+
+    /* TODO: Try span sizing */
+    .item5 {
+      /* grid-column: span 2; */
+      /* grid-row: span 2; */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Grid sizing</h1>
+  <h2></h2>
+
+  <div class="grid root">
+
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
+    <!--<div class="item">10 10 10 10 10 10 10 10 10</div>-->
+
+  </div>
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <ul>
+      <li>Percent doesn’t work well when adding up to 100%</li>
+      <li><code>fr</code> is a flexible unit that means 'fraction of free space'</li>
+      <li>Default width of grid is 100%, default height is as large as content</li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

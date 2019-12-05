@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Griddy Vistas!</title>
+
+  <style>
+    html {
+      /* border-box box model allows us to add padding and border to our elements without increasing their size */
+      box-sizing: border-box;
+      /* A system font stack so things load nice and quick! */
+      font-family: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 12px;
+      text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      display: grid;
+      justify-content: center;
+      margin: 0px;
+    }
+
+    .root {
+      width: 500px;
+      background-color: gray;
+      display: grid;
+      grid-template-rows: 88px auto auto;
+      gap: 10px;
+    }
+
+    .root>div {
+      margin: 0px 16px 0px 16px;
+    }
+
+    .list .item {
+      display: grid;
+    }
+
+    .header {
+      align-self: center;
+    }
+
+    .header p {
+      font-size: 2em;
+      margin: 0px;
+    }
+
+    .title,
+    .item-title {
+      font-size: 2em;
+    }
+
+    .list .item {
+      margin-bottom: 16px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="root">
+    <div class="header">
+      <p>Griddy Vistas</p>
+    </div>
+    <div class="content">
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+    </div>
+    <div class="list">
+      <div class="item">
+        <div class="thumb">T</div>
+        <div class="text">
+          <p class="item-title">Title</p>
+          <p class="item-subtitle">Subtitle</p>
+        </div>
+      </div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

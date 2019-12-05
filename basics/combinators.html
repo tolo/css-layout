@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/styles.css">
+  <title>Selector Combinators</title>
+
+  <style>
+    .hello {
+      background-color: plum;
+    }
+
+    /* Descendant combinator */
+    /*.root p#hello1 {
+      background-color: mistyrose;
+    }*/
+
+    /* Child combinator */
+    /* (Remove div and see what happens) */
+    /*.root > div p#hello1 { 
+      background-color: hotpink;
+    }*/
+
+    /* General sibling combinator */
+    /*#hello2 ~ p {
+      background-color: turquoise;
+    }*/
+
+    /* Adjacent sibling combinator */
+    /*#hello2 + p {
+      background-color: goldenrod;
+    }*/
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Selector Combinators</h1>
+
+  <div class="root">
+    <div class="container">
+      <p class="thingy hello" id="hello1">Hello World 1</p>
+      <p class="thingy hello" id="hello2">Hello World 2</p>
+      <p class="thingy hello" id="hello3">Hello World 3</p>
+      <p class="thingy hello" id="hello4">Hello World 4</p>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
